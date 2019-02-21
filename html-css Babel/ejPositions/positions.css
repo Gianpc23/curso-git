@@ -1,0 +1,23 @@
+div.rel1{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: sticky;   /*Lo deja pegado arriba y baja con el 
+                        scroll*/
+    top: 0px;           /*El sticky necesita este top*/
+}
+div.rel2{
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
+    /* position: fixed; */
+    top: 300px;
+} 
+div.rel0{
+    height: 7000px;
+}
+
+
+
+
+

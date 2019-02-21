@@ -1,0 +1,28 @@
+div#padre{
+    display: flex; /*Hace que salgan en una fila!, que sino
+                    cada Div hace un salto de linea*/   
+    border: 1px solid black;
+    width: 50%;
+    height: 700px;
+    flex-wrap: wrap; /*Conserva el tamaño original, y si no cabe
+                       lo coloca abajo*/
+    /*justify-content: center; /*Centra los hijos*/
+    justify-content: space-around;
+    /*justify-content: space-between; /*Los separa y adapta*/
+    align-items: center; /*Todos los hijos se centran verticalmente*/
+
+}
+
+div.hijo {
+    background-color: orange;
+    width: 200px;
+    height: 250px;
+    border: 1px solid black;
+    order: 2;
+}
+
+div.hijo3{
+    order: 1;   /*Le da prioridad sobre los demás*/
+    align-self: flex-start; /*Lo pone arriba del todo*/
+    justify-self: flex-start; /**/
+}

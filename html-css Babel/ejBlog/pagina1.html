@@ -1,0 +1,60 @@
+<!--
+    ##Ejemplo de FORMULARIO##
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formulario</h1>
+    <form action="/login" method="POST">
+        <fieldset>
+            <legend>Campos 1</legend>
+            <div>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="username" placeholder="Usuario" autofocus>
+            </div>
+            <div>
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pw">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Campos 2</legend>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com">
+            </div>
+            <div>
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color">
+            </div>
+            <div>
+                <label for="url">Mi blog:</label>
+                <input type="url" id="url" name="url">
+            </div>
+            <div>
+                <label for="verdad">Es verdad?:</label>
+                <input type="radio" id="verdad" name="verdad" value="si" checked>Si
+                <input type="radio" id="verdad" name="verdad" value="no">No
+            </div>
+            <div>
+                <select name="opcion" id="opcion">
+                    <option value="1">Opcion 1</option>
+                    <option value="2">Opcion 2</option>
+                    <option value="3">Opcion 3</option>
+                </select>
+            </div>
+        </fieldset>
+        <button type="submit">Login</button>
+    </form>
+</body>
+
+</html>

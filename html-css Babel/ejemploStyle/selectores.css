@@ -1,0 +1,71 @@
+* {
+    color: blue;
+}
+h2, h3 {
+    color: yellow;
+}
+
+div > p{ /*Solo aplicablea las p que son hijos directos de div*/
+    font-style: italic;
+}
+div p{ /*Con solo espacio aplica a hijos que no tienen por qué ser
+        directos, es decir, a nietos también, etc.*/
+    font-weight: bold;
+}
+.titulo, .subtitulo{/*Por clase*/
+    text-decoration: underline;
+}
+#titulo-principal{  /*Por id*/
+    border: 1px solid black;
+}
+label + input{ /*El ancho del input que viene tras un label,
+                 es decir, al los que vienen juntitos   */
+    width: 400px;
+}
+label ~ input{ /*Afecta cuando el label y el input están al
+                mismo nivel*/
+    height: 50px;
+}
+/****************Con atributos!*******************/
+input[required]{    /*A todos los inputs que tengan el atributo
+                      required*/
+    border: 1px solid orange;
+}
+a[href="www.babel.es"]{ /*A todos los a que tengan como href
+                          www.babel.es*/
+    color:green;
+}
+a[href$=".es"]{     /*Quita la línea a los que terminan en .es*/
+    text-decoration: none;
+}
+a[href^="http"]{    /*Tacha a los que empiezan por http su href*/
+    text-decoration: line-through;
+}
+a:not([href^="http"]){
+    text-decoration: overline;
+}
+h1:not(.subtitulo){  /*A todo los h1 que no sean subtitulo se tacha*/
+    text-decoration: line-through;
+}
+
+a[href*="b"]{   /*Aquellos que CONTENGAN la letra b*/
+    font-size: 20px;
+}
+
+div p{
+    font-style: normal;
+}
+p{
+    font-style: italic;
+}
+
+body{
+    background-image: url(C:/Users/gianfranco.perez/Pictures/skyrim.jpg);
+}
+
+
+
+
+
+
+
