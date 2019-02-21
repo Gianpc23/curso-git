@@ -89,3 +89,31 @@ section.sect{
     background: #3B5998;
     color: white;
   }
+
+  a#botonCompra{
+    visibility: hidden;
+    /* animation: showBtn 5s; */
+    /* opacity: 0; */
+  }
+
+  @keyframes showBtn {
+     from{
+        visibility: hidden;
+        position: relative;
+        margin-top: -50px;
+     }
+     to{
+        visibility: visible;
+        position: relative;
+        margin-top: -5px;
+     }
+
+  }
+
+  div#card{
+      width: 100%;
+  }
+div#card:hover a{
+    animation: showBtn 0.2s forwards;
+}
+
