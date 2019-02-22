@@ -167,3 +167,21 @@ span{
     display: flex;
     justify-content: flex-end;
 }
+
+@keyframes oscurecer{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: whitesmoke;
+    }
+}
+
+div.card:hover div.card-body{
+    animation: oscurecer 0.5s forwards;
+}
+h5.card-title{
+    text-decoration: underline;
+    text-align: center;
+}
+
