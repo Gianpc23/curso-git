@@ -92,6 +92,7 @@ section.sect{
 
   a#botonCompra{
     visibility: hidden;
+    /* position: absolute; */
     /* animation: showBtn 5s; */
     /* opacity: 0; */
   }
@@ -100,20 +101,22 @@ section.sect{
      from{
         visibility: hidden;
         position: relative;
-        margin-top: -50px;
+        /* margin-top: -50px; */
      }
      to{
         visibility: visible;
         position: relative;
-        margin-top: -5px;
+        /* margin-top: -5px; */
      }
 
   }
 
   div#card{
       width: 100%;
+      /* position: absolute; */
+      /* z-index: 1; */
   }
 div#card:hover a{
-    animation: showBtn 0.2s forwards;
+    animation: showBtn 1s forwards;
 }
 
