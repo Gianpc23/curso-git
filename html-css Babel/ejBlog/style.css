@@ -12,9 +12,21 @@ div#padre{
     /* align-items: center; Todos los hijos se centran verticalmente */
 
 }
+body{
+    background-color: #94F2EC;
+}
 header#head{
+    margin-bottom: 10   px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: #404040;
+    color: #FF0808;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+    
 }
 h1.tittle{
     width:60%;
@@ -23,7 +35,7 @@ h1.tittle{
 div#padre1{ 
     display: flex;
     border: 1px solid black;
-    width: 59%;
+    width: 70%;/*59%*/
     /* height: 100%; */
     flex-wrap: wrap;
     justify-content: space-around;
@@ -33,7 +45,7 @@ div#padre1{
 
 div.hijo {
     /* background-color: orange; */
-    width: 39%;
+    width: 28%; /*39%*/
     margin: 5px;
     text-align: center;
     /* height: 100%; */
@@ -47,10 +59,6 @@ div.hijo3{
     align-self: flex-start; /*Lo pone arriba del todo*/
     justify-self: flex-start; /**/
 }
-div.foot{
-    display: flex;
-    /* margin-right: 10px; */
-}
 ul#ul1{
     display: flex;
 }
@@ -61,13 +69,22 @@ ul#ul2{
     list-style: none;   
 }
 li.li1{
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    width: 33%;
+    color: white;
 }
 li.li2{
+    display: flex;
+    justify-content: center;
     width: 33%;
 }
 section.sect{
     width: 40%;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 /* Style all font awesome icons */
@@ -120,3 +137,33 @@ div#card:hover a{
     animation: showBtn 1s forwards;
 }
 
+p {
+    text-align: justify;
+  text-justify: inter-word;
+}
+aside > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font: italic;
+}
+li.li2{
+    text-align: center;
+    
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #404040;
+}
+ul a{
+    color: red;
+}
+ul a:hover{
+    color: red;
+}
+span{
+    color:red;
+    display: flex;
+    justify-content: flex-end;
+}
