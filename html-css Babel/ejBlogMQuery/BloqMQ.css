@@ -25,9 +25,7 @@ header#head{
     background-color: #404040;
     color: #FF0808;
     position: sticky;
-    top: 0;
-    position: -webkit-sticky;
-    
+    top: 0;    
 }
 h1.tittle{
     width:100%;
@@ -39,12 +37,18 @@ h1.tittle{
     }
 }
 
+section.sect{
+    width: 95%;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
 @media screen and (min-width: 1120px){
     section.sect{
         width: 40%;
     }
 }
-
 
 div#padre1{ 
     display: flex;
@@ -93,13 +97,7 @@ li.li2{
     justify-content: center;
     width: 33%;
 }
-section.sect{
-    width: 90%;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-}
+
 
 /* Style all font awesome icons */
 .fa {
