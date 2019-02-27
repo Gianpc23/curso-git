@@ -140,11 +140,6 @@ li.li2{
 
   }
 
-  div#card{
-      /* width: 100%; */
-      /* position: absolute; */
-      /* z-index: 1; */
-  }
 div#card:hover a{
     animation: showBtn 1s forwards;
 }
