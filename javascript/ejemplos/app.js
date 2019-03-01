@@ -184,7 +184,7 @@ Serie.prototype.capsRestantes = function () {
 }
 
 let arrSeries = [new Serie("Serie1", 20, 10, true),
-                new Serie("Serie2", 30, 5, false)];
+new Serie("Serie2", 30, 5, false)];
 
 function devuelveSeriesNoFinalizadas(arr) {
     console.log(arr.filter((serie) => {
@@ -194,24 +194,60 @@ function devuelveSeriesNoFinalizadas(arr) {
 devuelveSeriesNoFinalizadas(arrSeries);
 
 
+/**
+ * Ejemplo de replace en texto
+ */
+texto = "Paco viene con las rebajas";
 
 
+/**
+ * Ejercicio 5: Crear una función que te dice si son palíndromos o no
+ */
 
 
+function esPalindromo(texto) {
+    texto = texto.replace(/ /g, "").toLowerCase();
+    let arr1 = texto.split("");
+    let arr2 = texto.split("").reverse();
+    // console.log(arr1);
+    // console.log(arr2);
+    return arr1.join("") === arr2.join("") ? true : false;
+}
+// console.log(esPalindromo("hol al oh"));
+// console.log(esPalindromo("hol al o"));
 
+function esPar(num){
+    return num%2==0 ? true:false;
+}
 
+/**
+ * Ejercicio 8
+ */
 
+function ejercicio8(arr, fun) {
+    let res = [];
+    for (let i of arr) {
+        if (fun(i)) res.push(i);
+    }
+    return res;
+}
+console.log(ejercicio8(["girafarig","hooh","hooah"], esPalindromo));
+console.log(ejercicio8([2,4,6,7,9], esPar));
 
-
-
-
-
-
-
-
-
-
-
+/**Otra solucion */
+function miFilter(miArray,fnFilter){
+    let resultado = [];
+    miArray.forEach((elem) =>{
+        if(fnFilter(elem))
+            resultado.push(elem);
+    });
+    return resultado;
+}
+console.log("----------------");
+console.log(miFilter(["girafarig","hooh","hooah"],esPalindromo));
+console.log(miFilter([2,4,6,7,9],(elem)=>{
+    return elem%2==0;
+}));
 
 
 
