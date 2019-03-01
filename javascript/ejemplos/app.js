@@ -249,8 +249,28 @@ console.log(miFilter([2,4,6,7,9],(elem)=>{
     return elem%2==0;
 }));
 
+/**
+ * 
+ * Funciones FLECHA!
+ * -Son funciones anónimas
+ */
+b = () => {
+    console.log('b');
+}
 
+c = num =>{
 
+ }
+
+d = (num,pos) => {
+
+}
+
+e = (n1,n2) => n1+n2;   //Sin el return 
+
+let numeros = [1,3,6,2,8,0,2];
+let max = Math.max(...numeros); //Sin los 3 puntitos serías Math.max(1,3,6,2,8,0,2);
+// console.log(max);
 
 
 
