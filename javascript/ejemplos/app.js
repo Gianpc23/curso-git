@@ -65,6 +65,7 @@ for (let i in persona) {
     console.log(i);
 }
 */
+/*
 let number = Math.floor(Math.random() * 51);
 console.log(number);
 let nVeces = 0;
@@ -83,7 +84,7 @@ do {
         }
     } else if ((number - nUser) > 0 ? console.log("El numero escogido es menor") : console.log("El numero escogido es mayor"));
 } while (!bool);
-
+*/
 
 const nums = [1, 2, 3, 4];
 
@@ -115,9 +116,96 @@ console.log(arr3);
  *  Funciones autoejecutables
  * ************************* */
 (function () {                               //Sin nombre, ya que sólo se ejecutará 1 vez.
-    console.log('Función autoejecutable');
-}())    //Entre paréntesis se convierte en "expresión", como (2+2) y los () de esta última línea es para 
-        //ejecutar la función, como f(), de ahí lo de autoejecutable.
+    console.log('\nFunción autoejecutable');
+}());       //Entre paréntesis se convierte en "expresión", como (2+2) y los () de esta última línea es para ejecutar la función, como f(), de ahí lo de autoejecutable.
+(function (param) {
+    console.log('Función autoejecutable ' + param);
+}('alguete param'));
+
+
+/***************************
+ * Objetos en JavaScript
+* ************************* */
+const coche = {
+    marca: "Testla",
+    modelo: "Model S3",
+    color: "Negro"
+};
+
+console.log(coche.marca);
+//console.log(coche['marca']);
+coche.color = "Blanco";
+console.log(coche);
+
+/*Para eliminar la propiedad*/
+delete coche.modelo;
+console.log(coche);
+
+/*Para añadir una nueva propiedad*/
+coche.modelo = "Model S";
+console.log(coche);
+
+/**Añadir métodos a los objetos */
+// coche.pitar = function(){
+//     console.log("Piiiii");
+// }
+// coche.pitar();
+
+function Coche(marca, modelo, sonido, color) {   //Funciones constructoras   
+    this.marca = marca;
+    this.modelo = modelo;
+    this.sonido = sonido;
+    this.color = color;
+    // this.pitar = function() {
+    //     console.log(this.sonido);
+    // }
+}
+
+Coche.prototype.pitar = function () {
+    console.log("Piiiii");
+}
+
+let seat = new Coche("Seat", "Ibiza", "Piii Piii", "Verde");
+let bmw = new Coche("BMW", "120", "Piiii", "Negro");
+// console.log(seat);
+// console.log(bmw);
+
+console.log("------------------------------")
+
+function Serie(titulo, episodiosTotales, episodiosVistos, finalizada) {
+    this.titulo = titulo;
+    this.episodiosTotales = episodiosTotales;
+    this.episodiosVistos = episodiosVistos;
+    this.finalizada = finalizada;
+}
+
+Serie.prototype.capsRestantes = function () {
+    console.log(this.episodiosTotales - this.episodiosVistos);
+}
+
+let arrSeries = [new Serie("Serie1", 20, 10, true),
+                new Serie("Serie2", 30, 5, false)];
+
+function devuelveSeriesNoFinalizadas(arr) {
+    console.log(arr.filter((serie) => {
+        return !serie.finalizada;
+    }));
+}
+devuelveSeriesNoFinalizadas(arrSeries);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
