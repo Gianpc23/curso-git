@@ -1,4 +1,6 @@
-console.log("Hola a todos");
+import {Mascota} from './mascota';
+
+// console.log("Hola a todos");
 num = 4;
 num = 'Un num';
 // console.log(num);
@@ -109,18 +111,18 @@ const arr3 = nums.filter((num) => {
 }).map((num) => {
     return 'Item ' + num;
 });
-console.log(arr3);
+// console.log(arr3);
 
 
 /***************************
  *  Funciones autoejecutables
  * ************************* */
-(function () {                               //Sin nombre, ya que sólo se ejecutará 1 vez.
-    console.log('\nFunción autoejecutable');
-}());       //Entre paréntesis se convierte en "expresión", como (2+2) y los () de esta última línea es para ejecutar la función, como f(), de ahí lo de autoejecutable.
-(function (param) {
-    console.log('Función autoejecutable ' + param);
-}('alguete param'));
+// (function () {                               //Sin nombre, ya que sólo se ejecutará 1 vez.
+//     console.log('\nFunción autoejecutable');
+// }());       //Entre paréntesis se convierte en "expresión", como (2+2) y los () de esta última línea es para ejecutar la función, como f(), de ahí lo de autoejecutable.
+// (function (param) {
+//     console.log('Función autoejecutable ' + param);
+// }('alguete param'));
 
 
 /***************************
@@ -132,18 +134,18 @@ const coche = {
     color: "Negro"
 };
 
-console.log(coche.marca);
+// console.log(coche.marca);
 //console.log(coche['marca']);
 coche.color = "Blanco";
-console.log(coche);
+// console.log(coche);
 
 /*Para eliminar la propiedad*/
 delete coche.modelo;
-console.log(coche);
+// console.log(coche);
 
 /*Para añadir una nueva propiedad*/
 coche.modelo = "Model S";
-console.log(coche);
+// console.log(coche);
 
 /**Añadir métodos a los objetos */
 // coche.pitar = function(){
@@ -231,8 +233,8 @@ function ejercicio8(arr, fun) {
     }
     return res;
 }
-console.log(ejercicio8(["girafarig","hooh","hooah"], esPalindromo));
-console.log(ejercicio8([2,4,6,7,9], esPar));
+// console.log(ejercicio8(["girafarig","hooh","hooah"], esPalindromo));
+// console.log(ejercicio8([2,4,6,7,9], esPar));
 
 /**Otra solucion */
 function miFilter(miArray,fnFilter){
@@ -243,11 +245,11 @@ function miFilter(miArray,fnFilter){
     });
     return resultado;
 }
-console.log("----------------");
-console.log(miFilter(["girafarig","hooh","hooah"],esPalindromo));
-console.log(miFilter([2,4,6,7,9],(elem)=>{
-    return elem%2==0;
-}));
+// console.log("----------------");
+// console.log(miFilter(["girafarig","hooh","hooah"],esPalindromo));
+// console.log(miFilter([2,4,6,7,9],(elem)=>{
+//     return elem%2==0;
+// }));
 
 /**
  * 
@@ -255,7 +257,7 @@ console.log(miFilter([2,4,6,7,9],(elem)=>{
  * -Son funciones anónimas
  */
 b = () => {
-    console.log('b');
+    // console.log('b');
 }
 
 c = num =>{
@@ -271,6 +273,73 @@ e = (n1,n2) => n1+n2;   //Sin el return
 let numeros = [1,3,6,2,8,0,2];
 let max = Math.max(...numeros); //Sin los 3 puntitos serías Math.max(1,3,6,2,8,0,2);
 // console.log(max);
+
+/**
+ * CLASES EN JS
+ */
+class Coche1{
+    constructor(marca, modelo, sonido, color,duenyo){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.sonido = sonido;
+        this.color = color;
+        var _duenyo = duenyo;       /**"Privado", y por consenso de ponen con "_" delante */
+        this.getDuenyo = () => {    /**Y se definen funciones para acceder a esa variable privada */
+            return _duenyo;
+        }
+        this.setDuenyo = (duenyo) => {
+            _duenyo = duenyo;
+        }
+    }
+    /**No se pone la palabra function a las funciones */
+    pitar(){
+        console.log(this.sonido);
+    }
+    /**METODO statico para sacar directamente de la clase, sin tener
+     * que crear una instancia de Coche1, ya que todos los Coche1 tendrán 4 */
+    static getNumRuedas(){
+        return 4;
+    }
+
+}
+
+const audi = new Coche1('Audi','A4','Piiiii','Negro','Pepito');
+audi.pitar();
+console.log(audi.marca);
+console.log(Coche1.getNumRuedas());
+console.log(audi._duenyo);  /**Devuelde undefined porque es "privada" */
+console.log(audi.getDuenyo());
+audi.setDuenyo('Paquito');
+console.log(audi.getDuenyo());
+
+/**
+ * HERENCIA EN JS
+ */
+class Rectangulo{
+    constructor(lado, altura){
+        this.lado = lado;
+        this.altura = altura;
+    }
+    geArea(){
+        return this.lado * this.altura;
+    }
+
+}
+
+ class Cuadrado extends Rectangulo{
+    constructor(lado){
+        super(lado,lado);        /**Estamos llamando al constructor de Recatangulo */
+    }
+}
+
+const c1 = new Cuadrado(3);
+console.log('Area Cuadrado: ' + c1.geArea());
+
+/**
+ * MODULOS, importar clase mascota del fichero mascota.js
+ */
+const perro = new Mascota('Toby','perro');
+const gato = new Mascota('Felix','gato');
 
 
 
