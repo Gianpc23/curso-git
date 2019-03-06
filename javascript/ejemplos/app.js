@@ -1,4 +1,4 @@
-import {Mascota} from './mascota';
+const Mascota = require('./mascota');
 
 // console.log("Hola a todos");
 num = 4;
@@ -341,6 +341,8 @@ console.log('Area Cuadrado: ' + c1.geArea());
 const perro = new Mascota('Toby','perro');
 const gato = new Mascota('Felix','gato');
 
+console.log(gato);
+console.log(perro);
 
 
 

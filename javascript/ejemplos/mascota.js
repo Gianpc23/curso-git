@@ -1,4 +1,4 @@
-export class Mascota {      /**Con "export", se podrá importar en los otros ficheros */
+class Mascota {      /**Con "export", se podrá importar en los otros ficheros */
     constructor(nombre, tipo){
         this.nombre = nombre;
         this.tipo = tipo;
@@ -6,7 +6,7 @@ export class Mascota {      /**Con "export", se podrá importar en los otros fic
 
 }
 
-
+module.exports = Mascota;
 
 
 
