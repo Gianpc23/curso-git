@@ -64,6 +64,7 @@ function ejercicio3() {
     });
 }
 
+
 {/* <div id="div">
 
 </div>
@@ -106,7 +107,6 @@ function ejercicioAjax() {
     });
 
 }
-
 function ejercicioAjax2(nombre, valor) {
     const URL_GASTOS = 'https://ejemplo-d49a3.firebaseio.com/ingresos-gastos.json';
     return fetch(URL_GASTOS, {
@@ -252,7 +252,7 @@ function ejercicio6Events() {
     });
 }
 
-//ejercicio6Events();
+ejercicio6Events();
 
 
 

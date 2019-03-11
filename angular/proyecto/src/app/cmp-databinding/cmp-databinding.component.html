@@ -1,0 +1,24 @@
+<!-- <h1>Data Binding</h1>
+<h2>String Interpolation</h2>
+<p>Me llamo {{miNombre}}</p>
+<h2>Property Binding</h2>
+<input type="text" [disabled]="!modoEditar" [placeholder]="Texto">
+
+<h2>Event Binding</h2>
+<button type="button" (click)="cambiarModoEditar()">Modo editar: {{modoEditar ? 'activado':'desactivado'}}</button>
+
+<h2>Two-Way Data Binding</h2>
+<p>Datos: {{personaje.nombre}} {{personaje.apellido}}</p>
+<input type="text" [(ngModel)] = personaje.nombre>
+<input type="text" [(ngModel)] = personaje.apellido>
+<h2>Variable de plantillas</h2>
+<input type="text" #nuevoNombre>
+<button type="button" (click)="cambiaNombre(nuevoNombre.value)">Cambiar nombre de personaje</button>
+
+<h2>My Two-Way Binding</h2>
+<input type="text" #miInput [value]="personaje.nombre" (input)="cambiaNombre(miInput.value)"> -->
+
+<app-hijo1 [nombrePadre]="miNombre"></app-hijo1>
+<app-hijo2 ></app-hijo2>
+
+
