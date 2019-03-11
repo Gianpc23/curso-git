@@ -18,9 +18,7 @@ function ejercicio1() {
                 alert("Has GANADO!");
             }
         }
-        console.log(aux);
-    } while (aux == true);
-
+    } while (aux);
     console.log("FIN");
 }
 
