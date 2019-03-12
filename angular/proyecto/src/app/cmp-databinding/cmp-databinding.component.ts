@@ -12,6 +12,7 @@ export class CmpDatabindingComponent implements OnInit {
     nombre: "Rickon",
     apellido: "Stark"
   }
+  nombreHijo1 = 'Paquillo';
   constructor() { }
   Texto = "asdasd"
   ngOnInit() {

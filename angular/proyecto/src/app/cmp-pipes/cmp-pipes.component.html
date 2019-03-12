@@ -1,0 +1,26 @@
+<h1>Pipes</h1>
+
+<p>Texto: {{ texto }}</p>
+<p>Texto: {{ texto | uppercase}}</p>
+
+
+<p>Fecha: {{ fecha }}</p>
+<p>Fecha: {{ fecha | date}}</p>
+<p>Fecha: {{ fecha | date:"dd 'del' MMM 'del' yyyy"}}</p>
+
+<p>Precio: {{ precio }}</p>
+<p>Precio: {{ precio | currency:"EUR"}}</p>
+<p>Precio: {{ precio | doble:_:7}}</p>
+
+<p>Vuelta: {{'hola mundo' | reverse}}</p>
+
+
+<h2>Impuros</h2>
+<input type="text" (change)="starks.push($event.target.value)">
+<ul>
+  <li *ngFor="let nombre of starks">{{nombre}}</li>
+</ul>
+<ul>
+  <li *ngFor="let nombre of starks | filtro:'r'">{{nombre}}</li>
+</ul>
+<p>Mensaje: {{ mensaje | async }}</p>

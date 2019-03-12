@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hijo2',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hijo2.component.css']
 })
 export class Hijo2Component implements OnInit {
-
+  @Input() nombrePadre = '';
+  @Input() nombreHermano = '';
   constructor() { }
 
   ngOnInit() {
   }
+
+  
 
 }

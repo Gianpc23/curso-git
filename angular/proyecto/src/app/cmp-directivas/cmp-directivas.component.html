@@ -1,0 +1,43 @@
+<h1>Directivas</h1>
+<h2>De atributo</h2>
+<p [ngStyle]="{color: 'blue', 'text-decoration': 'underline'}">Texto subrayado azul</p>
+<p [ngClass]="{tachado:true, letraAmarilla:false}">Texto tachado amarillo</p>
+
+<!-- <p appMarcar>Aplicando directiva marcar</p>
+<p appMarcar color="orange">Aplicando directiva marcar naranja</p>
+<p appMarcar color="green">Aplicando directiva marcar verde</p> -->
+<p appMarcar>Aplicando directiva marcar</p>
+<p appMarcar="orange">Aplicando directiva marcar naranja</p>
+<p appMarcar="green">Aplicando directiva marcar verde</p>
+
+
+
+<h2>Estructurales</h2>
+<p *ngIf="mostrar">Se muestra si mostrar=true</p>
+<p *ngIf="!mostrar">Se muestra si mostrar=false</p>
+
+<div *ngIf="mostrar; then if2 else else2"></div>
+<ng-template #if2>
+  <p>Se muestra si mostrar=true (IF 2)</p>
+</ng-template>
+<ng-template #else2>
+  <p>Se muestra si mostrar=false (ELSE 2)</p>
+</ng-template>
+
+<button class="btn btn-danger" (click)="cambiarBoton()">{{mostrar}}</button>
+
+<ul>
+  <li *ngFor="let item of items; let pos=index">{{pos}}: {{item}}</li>
+</ul>
+<ul>
+  <li *ngFor="let item of persona | keyvalue"><strong>{{item.key | titlecase}}:</strong> {{item.value}}</li>
+</ul>
+
+<h3>Switch</h3>
+<div [ngSwitch]="miMascota">
+  <p *ngSwitchCase="'gato'">Tengo un gato</p>
+  <p *ngSwitchCase="'perro'">Tengo un perro</p>
+  <p *ngSwitchDefault>Tengo otra mascota</p>
+</div>
+
+
