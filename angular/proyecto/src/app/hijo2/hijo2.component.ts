@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class Hijo2Component implements OnInit {
   @Input() nombrePadre = '';
   @Input() nombreHermano = '';
+  @Input() personaHermano = {
+    
+  }
   constructor() { }
 
   ngOnInit() {

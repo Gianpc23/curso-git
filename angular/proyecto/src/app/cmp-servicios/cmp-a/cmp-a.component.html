@@ -1,0 +1,9 @@
+<h1>CMP A</h1>
+<input type="text" #dato>
+<button type="button" class="success" (click)="addDato(dato)">Add dato</button>
+<button class="btn btn-warning" (click)="enviarDato(dato)">Enviar Dato</button>
+
+<h3>Datos</h3>
+<ul *ngFor="let dato of datos">
+  <li>{{ dato }}</li>
+</ul>

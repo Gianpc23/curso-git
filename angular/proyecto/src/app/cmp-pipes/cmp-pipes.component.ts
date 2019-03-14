@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cmp-pipes.component.css']
 })
 export class CmpPipesComponent implements OnInit {
-  texto = "Winter is coming!";
+  texto = "hola adios chao asd";
   precio = 12;
   fecha = new Date(2019,3,15);
   starks = ["Arya","Bran","Rickon","Sansa","Robb"];

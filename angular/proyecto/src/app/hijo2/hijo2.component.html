@@ -1,5 +1,23 @@
-<h3>Hijo {{ nombre }}</h3>
+<!-- <h3>Hijo {{ nombre }}</h3>
 <p>Mi padre se llama {{nombrePadre}}</p>
-<p>Mi hermano se llama {{nombreHermano}}</p>
+<p>Mi hermano se llama {{nombreHermano}}</p> -->
 
-
+<div class="row">
+    <div class="container-fluid">
+        <h2 class="text-center">{{personaHermano.nombre}} {{personaHermano.apellidos}}</h2>
+    </div>
+    <div class="col-md-8">
+        <h4>Email: {{personaHermano.email}}</h4>
+        <h4>Fecha Nacimiento: {{personaHermano.fechaNacimiento}}</h4>
+        <h4>Skills:</h4>
+        <div *ngFor="let item of personaHermano.skills" style="margin-left: 30px">
+            {{item}}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img [src]="(personaHermano.foto) ? personaHermano.foto : 'https://www.americanaircraftsales.com/wp-content/uploads/2016/09/no-profile-img.jpg'"
+                class="card-img-top" alt="crash">
+        </div>
+    </div>
+</div>

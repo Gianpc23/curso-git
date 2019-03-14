@@ -24,3 +24,4 @@
   <li *ngFor="let nombre of starks | filtro:'r'">{{nombre}}</li>
 </ul>
 <p>Mensaje: {{ mensaje | async }}</p>
+<p>Ocultar: {{ texto | ocultar:['chao','adios']}}</p>

@@ -1,2 +1,35 @@
-<h3>Hijo {{nombre}}</h3>
-<p>Mi padre se llama {{nombrePadre}}</p>
+<!-- <h3>Hijo {{nombre}}</h3>
+<p>Mi padre se llama {{nombrePadre}}</p> -->
+<form>
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="persona.nombre"
+            [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" class="form-control" id="apellido" placeholder="Apellido" [(ngModel)]="persona.apellidos"
+            [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="fecha">Fecha Nacimiento</label>
+        <input type="date" class="form-control" id="fecha" placeholder="Fecha" [(ngModel)]="persona.fechaNacimiento" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email"
+            [(ngModel)]="persona.email" [ngModelOptions]="{standalone: true}">
+        <small id="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+        <label for="foto">Link Foto</label>
+        <input type="text" class="form-control" id="foto" [(ngModel)]="persona.foto" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <div class="form-group">
+        <label for="skills">Skills</label>
+        <input type="text" class="form-control" id="skills" placeholder="Skill" #skillImput>
+        <button type="button" class="btn btn-primary" style="margin-top: 3px" (click)="anyadirSkill(skillImput.value)">Añadir</button>
+    </div>
+</form>

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*Para hacer que el título baje*/
+@keyframes titulo-baja {    /*Nombre de la animacion*/
+    from{   /*Como empieza*/
+        margin-top: -200px;
+    }
+    to {    /*Como termina*/
+        margin-top: 10px;
+    }
+}
+
+@keyframes shake{   /*Animación para que se agite*/
+    0%{ /*Inicialmente*/
+
+    }
+    20%{    /*20% del tiempo. Los grados son respecto a la posición inicial*/
+        transform: rotate(30deg);   /*Al 20% rotará*/
+    }
+    40%{
+        transform: rotate(-30deg);   /*Al 20% rotará*/
+    }
+    60%{
+        transform: rotate(45deg);   /*Al 20% rotará*/
+    }
+    80%{
+        transform: rotate(-45deg);   /*Al 20% rotará*/
+    }
+    100%{
+
+    }
+}

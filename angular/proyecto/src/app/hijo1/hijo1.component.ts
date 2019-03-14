@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-hijo1',
@@ -8,14 +9,30 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class Hijo1Component implements OnInit {
   nombre = 'Paquillo';
   @Input() nombrePadre = '';
-  @Output() nombreCambiado = new EventEmitter<string>();
+
 
   constructor() { }
+
+  skills: string[] = [];
+
+  persona = {
+    nombre: "",
+    apellidos: "",
+    fechaNacimiento: "",
+    email: "",
+    foto: "",
+    skills:[],
+  }
 
   ngOnInit() {
   }
   cambiarNombre(nuevoNombre: string): void {
     this.nombre = nuevoNombre;
-    this.nombreCambiado.emit(this.nombre);
+    //this.nombreCambiado.emit(this.nombre);
+  }
+  anyadirSkill(skill:string) {
+    console.log(skill);
+    this.skills.push(skill);
+    this.persona.skills=this.skills;
   }
 }
