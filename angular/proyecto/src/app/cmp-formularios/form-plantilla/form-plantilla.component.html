@@ -1,0 +1,23 @@
+<h2>De plantilla</h2>
+
+<form #miForm="ngForm" (ngSubmit)="enviarDatos(miForm)" >
+  <div>
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" [ngModel]="datos.usuario" name="usuario" #inputUsuario="ngModel" required>
+    <p *ngIf="inputUsuario.invalid && inputUsuario.dirty">El campo es invalido</p>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" [ngModel]="datos.password" name="password" #inputPass="ngModel" required>
+    <p *ngIf="inputPass.invalid && inputPass.dirty">El campo es invalido</p>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [ngModel]="datos.email" name="email" #inputEmail="ngModel" required>
+    <p *ngIf="inputEmail.invalid && inputEmail.dirty">El campo es invalido</p>
+  </div>
+  <button type="submit" [disabled]="miForm.invalid">Enviar</button>
+</form>
+
+
+

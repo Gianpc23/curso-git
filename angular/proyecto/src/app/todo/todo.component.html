@@ -1,0 +1,15 @@
+<h1>Todo</h1>
+
+<form [formGroup]="miForm" (ngSubmit)="addTarea(input1.value)">
+  <input type="text" #input1 placeholder="Tarea">
+  <button class="btn btn-success">Añadir</button>
+  <button class="btn btn-warning" (click)="deleteTarea(input1.value)">Eliminar Tarea</button>
+</form>
+
+<h3>Lista</h3>
+<ul *ngFor="let tarea of todoService.tareas">
+  <li> {{tarea}}
+    <input type="checkbox" autocomplete="off" (change)="prueba($event)">
+  </li>
+</ul>
+<p>{{siglas}}</p>

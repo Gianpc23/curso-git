@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-componente.component';
@@ -20,6 +20,10 @@ import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
 import { CmpAComponent } from './cmp-servicios/cmp-a/cmp-a.component';
 import { CmpBComponent } from './cmp-servicios/cmp-b/cmp-b.component';
 import { DatosService } from './cmp-servicios/datos.service';
+import { TodoComponent } from './todo/todo.component';
+import { CmpFormulariosComponent } from './cmp-formularios/cmp-formularios.component';
+import { FormPlantillaComponent } from './cmp-formularios/form-plantilla/form-plantilla.component';
+import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reactivo.component';
 
 @NgModule({
   declarations: [
@@ -39,11 +43,16 @@ import { DatosService } from './cmp-servicios/datos.service';
     PowerDirective,
     CmpServiciosComponent,
     CmpAComponent,
-    CmpBComponent
+    CmpBComponent,
+    TodoComponent,
+    CmpFormulariosComponent,
+    FormPlantillaComponent,
+    FormReactivoComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
