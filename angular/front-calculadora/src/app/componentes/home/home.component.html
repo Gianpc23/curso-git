@@ -1,0 +1,58 @@
+
+<div class="row">
+  <div class="col-md-7">
+    <div id='calc-contain'>
+
+      <form name="calculator">
+    
+        <input type="text" name="answer" />
+        <br>
+    
+        <input type="button" value=" 1 " (click)="creaNum('1')"/>
+        <input type="button" value=" 2 " (click)="creaNum('2')"/>
+        <input type="button" value=" 3 " (click)="creaNum('3')"/>
+        <input type="button" value=" + " (click)="changeFlag('+')"/>
+        <br>
+    
+        <input type="button" value=" 4 " (click)="creaNum('4')"/>
+        <input type="button" value=" 5 " (click)="creaNum('5')"/>
+        <input type="button" value=" 6 " (click)="creaNum('6')"/>
+        <input type="button" value=" - " (click)="changeFlag('-')"/>
+        <br>
+    
+        <input type="button" value=" 7 " (click)="creaNum('7')"/>
+        <input type="button" value=" 8 " (click)="creaNum('8')"/>
+        <input type="button" value=" 9 " (click)="creaNum('9')"/>
+        <input type="button" value=" x " (click)="changeFlag('x')"/>
+        <br>
+    
+        <input type="button" value=" c " />
+        <input type="button" value=" 0 " (click)="creaNum('0')"/>
+        <input type="button" value=" = " (click)="mostrarResultado()"/>
+        <input type="button" value=" / " (click)="changeFlag('/')"/>
+        <br>
+    
+    
+      </form>
+      
+      <h3>Resultado: {{resultado}}</h3>
+    </div>
+  </div>
+
+  <div class="col-md-5">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        Buscar operaciones: 
+        <input type="text" name="busqueda" #busqueda placeholder="Tipo"/>
+        <button type="button" class="btn btn-info"
+        (click)="buscar(busqueda.value)">Buscar</button>
+
+        <div *ngFor="let res of resultados">
+          {{res | json}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

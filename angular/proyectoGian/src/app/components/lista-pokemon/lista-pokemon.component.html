@@ -1,0 +1,7 @@
+<mat-grid-list gutterSize="10px" cols="3" rowHeight="1:1">
+  <div *ngIf="pokemons.length ===9">
+    <mat-grid-tile *ngFor="let pokemon of pokemonSorted()">
+      <app-pokemon [pokemon]="pokemon" (stat)="getStats($event)"></app-pokemon>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

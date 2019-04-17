@@ -1,0 +1,11 @@
+#contenedor {
+    margin-top: 30%;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.abiButtons {
+    width: 120px;
+}

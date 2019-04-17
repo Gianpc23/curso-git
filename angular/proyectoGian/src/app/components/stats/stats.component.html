@@ -1,0 +1,30 @@
+<div id="contenedor" class="container vertical-center">
+  <div *ngIf="showStats===true">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <img mat-card-avatar [src]="pokemon.sprites.front_default" alt="asd" class="example-header-image">
+        <mat-card-title>{{pokemon.name}}</mat-card-title>
+        <mat-card-subtitle>{{pokemon.types}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+
+        <div *ngIf="arrAbilities.length!=0">
+          <span>Abilities: </span>
+          <div class="example-button-row">
+            <span *ngFor="let ability of arrAbilities">
+              <button mat-raised-button class="abiButtons" (click)="infoAbility(ability.url)">{{ability.name}}</button>
+            </span>
+          </div>
+        </div>
+
+        <div *ngIf="arrStats.length!=0 && showTable; else showEffect">
+          <app-stats-table [dataSource]="arrStats"></app-stats-table>
+        </div>
+        <ng-template #showEffect>
+            {{abilityEffect}}
+        </ng-template>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
