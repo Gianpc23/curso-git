@@ -1,0 +1,21 @@
+<mat-card class="example-card">
+
+  <mat-card-header style="justify-content: center">
+    <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  
+  <div class="example-container">
+    <mat-form-field *ngFor="let input of inputs;let cont=index">
+      <input matInput placeholder={{input}} name={{input}} [(ngModel)]="nameValueInputs[cont].value">
+    </mat-form-field>
+  </div>
+  
+  <p *ngFor="let variable of nameValueInputs">
+    Campo {{variable.inputName}} => {{variable.value}}
+  </p>
+  
+  <mat-card-actions style="text-align: center">
+    <button *ngFor="let button of buttons" mat-raised-button>{{button}}</button>
+  </mat-card-actions>
+
+</mat-card>

@@ -12,7 +12,10 @@
           <span>Abilities: </span>
           <div class="example-button-row">
             <span *ngFor="let ability of arrAbilities">
-              <button mat-raised-button class="abiButtons" (click)="infoAbility(ability.url)">{{ability.name}}</button>
+              <button  mat-raised-button class="abiButtons" (click)="infoAbility(ability.url)">{{ability.name}}</button>
+            </span>
+            <span *ngIf="!showTable">
+              <button mat-raised-button id="statButton" (click)="showTable=true">STATS</button>
             </span>
           </div>
         </div>
@@ -21,7 +24,7 @@
           <app-stats-table [dataSource]="arrStats"></app-stats-table>
         </div>
         <ng-template #showEffect>
-            {{abilityEffect}}
+            <p id="texto">{{abilityEffect}}</p>
         </ng-template>
       </mat-card-content>
     </mat-card>

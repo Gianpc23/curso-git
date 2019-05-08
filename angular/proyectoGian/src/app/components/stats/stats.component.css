@@ -1,5 +1,5 @@
 #contenedor {
-    margin-top: 30%;
+    margin-top: 5%;
 }
 .example-button-row button,
 .example-button-row a {
@@ -8,4 +8,8 @@
 
 .abiButtons {
     width: 120px;
+}
+
+p#texto {
+  margin-top: 10px; 
 }

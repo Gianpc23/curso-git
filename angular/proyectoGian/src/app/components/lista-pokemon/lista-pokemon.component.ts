@@ -37,10 +37,6 @@ export class ListaPokemonComponent implements OnInit {
   }
 
   getStats($event: number) {
-    /**this.listPokService.getPokemon(`https://pokeapi.co/api/v2/pokemon/${$event}/`).subscribe((obj) => {
-        let pokemon = new Pokemon(obj.id, obj.name, obj.abilities, obj.sprites, obj.types.map((t) => t.type.name));
-    }); */
-    /**Envia el id a el puente que esta en el service */
     this.listPokService.$stats.next($event);
   }
 

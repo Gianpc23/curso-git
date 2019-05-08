@@ -18,7 +18,6 @@ export class StatsComponent implements OnInit {
   showStats: boolean = false;
   abilityEffect:string = "";
   showTable:boolean = true;
-  changingAb:boolean = false;
  
   constructor(private statsService: StatsService,
     private listService: ListaPokemonService) { }
@@ -58,10 +57,8 @@ export class StatsComponent implements OnInit {
     .subscribe((obj)=>{
       this.abilityEffect = obj.effect_entries[0].effect;
       console.log(this.abilityEffect);
-      if(this.showTable){
-        this.showTable = false;
-        this.changingAb = true;
-      }
+
+      this.showTable = false;
       
     });
   }

@@ -2,21 +2,21 @@
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        <a class="nav-link" [routerLink]="'/home'" routerLinkActive="active">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        <a class="nav-link" [routerLink]="'/login'" routerLinkActive="active">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/userForm" routerLinkActive="active">Register</a>
       </li>
     </ul>
 
-    <span class="navbar-text col-md-8">
+    <span class="navbar-text col-md-6">
       API
     </span>
-    <form class="form-inline my-2 my-lg-0 col-md-6">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0 col-md-4">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 80%">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 
